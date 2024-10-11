@@ -10,6 +10,35 @@ namespace Lemoo_pos.Data
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Store> Stores { get; set; }
+        public DbSet<Branch> Branchs { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserBranch> UserBranches { get; set; }
+        public DbSet<Permission> Permissions { get; set; }
+
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                  .HasIndex(u => u.Email)
+                  .IsUnique();
+
+            modelBuilder.Entity<UserBranch>()
+                .HasOne(u => u.User)
+                .WithMany(user => user.Branchs)
+                .HasForeignKey(u => u.UserId);
+
+            modelBuilder.Entity<UserBranch>()
+              .HasOne(u => u.Branch)
+              .WithMany(branch => branch.Users)
+              .HasForeignKey(u => u.BranchId);
+
+            modelBuilder.Entity<UserBranch>()
+                .HasKey(u => new { u.UserId, u.BranchId });
+
+
+        }
 
 
         public override int SaveChanges()
