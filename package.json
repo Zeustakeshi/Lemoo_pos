@@ -1,0 +1,15 @@
+{
+    "name": "lemoo_pos",
+    "version": "1.0.0",
+    "description": "hệ thống website quản lý cửa hàng tạp hóa và siêu thị mini",
+    "main": "index.js",
+    "scripts": {
+        "tw:watch": "npx tailwindcss -i ./wwwroot/css/input.css -o ./wwwroot/css/output.css --watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "tailwindcss": "^3.4.13"
+    }
+}

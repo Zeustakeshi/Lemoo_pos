@@ -17,7 +17,6 @@ namespace Lemoo_pos.Data
         public DbSet<Permission> Permissions { get; set; }
 
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
@@ -36,10 +35,7 @@ namespace Lemoo_pos.Data
 
             modelBuilder.Entity<UserBranch>()
                 .HasKey(u => new { u.UserId, u.BranchId });
-
-
         }
-
 
         public override int SaveChanges()
         {
@@ -52,7 +48,6 @@ namespace Lemoo_pos.Data
         //    AddTimestamps();
         //    return await base.SaveChangesAsync();
         //}
-
 
         private void AddTimestamps()
         {

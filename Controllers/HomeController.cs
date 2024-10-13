@@ -23,7 +23,6 @@ namespace Lemoo_pos.Controllers
         }
 
         
-
        
     }
 }
