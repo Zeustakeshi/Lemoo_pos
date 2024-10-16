@@ -8,7 +8,7 @@ namespace Lemoo_pos.Services
     {
         private readonly ApplicationDbContext _db;
 
-        public UserService (ApplicationDbContext db ) {
+        public UserService (ApplicationDbContext db) {
             _db = db;
         }
 

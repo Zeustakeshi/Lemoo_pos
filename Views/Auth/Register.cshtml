@@ -1,0 +1,188 @@
+﻿@model CreateStoreModel
+@{ Layout = "_AuthLayout"; }
+<div class="flex w-full h-full justify-center items-start gap-10">
+    <div class="w-full max-w-[40%] flex flex-col items-center">
+        <div class="size-[200px] mb-10">
+            <img
+                class="w-full h-full object-cover"
+                src="/images/register-banner.png"
+                alt=""
+            />
+        </div>
+        <div>
+            <div class="flex justify-start items-center gap-2">
+                <img src="/images/inventory_ico.png" alt="" />
+                <div class="flex justify-start flex-col items-start">
+                    <h3 class="font-semibold text-lg">Quản lý kho hàng</h3>
+                    <p class="text-slate-900 test-sm">
+                        Kiểm soát chính xác số lượng mặt hàng trong kho
+                    </p>
+                </div>
+            </div>
+            <div class="space-y-6 my-6">
+                <div class="flex justify-start items-center gap-2">
+                    <div class="size-[28px] text-blue-500">
+                        <ion-icon
+                            class="size-[28px]"
+                            name="checkmark-done-circle-outline"
+                        ></ion-icon>
+                    </div>
+                    <p class="text-sm text-slate-500">
+                        Biết ngay sản phẩm nào trong kho còn hay hết vì hàng hóa
+                        trong kho được quản lý chi tiết từng mẫu theo màu sắc,
+                        kích thước, chất lượng
+                    </p>
+                </div>
+                <div class="flex justify-start items-center gap-2">
+                    <div class="size-[28px] text-blue-500">
+                        <ion-icon
+                            class="size-[28px]"
+                            name="checkmark-done-circle-outline"
+                        ></ion-icon>
+                    </div>
+                    <p class="text-sm text-slate-500">
+                        Mỗi khi có giao dịch phát sinh, số lượng sản phẩm sẽ
+                        được tự động cộng/trừ trên phần mềm quản lý kho, giúp
+                        kiểm soát chính xác hàng hóa trong kho.
+                    </p>
+                </div>
+
+                <div class="flex justify-start items-center gap-2">
+                    <div class="size-[28px] text-blue-500">
+                        <ion-icon
+                            class="size-[28px]"
+                            name="checkmark-done-circle-outline"
+                        ></ion-icon>
+                    </div>
+                    <p class="text-sm text-slate-500">
+                        Dễ dàng biết được mặt hàng nào sắp hết hay tồn kho quá
+                        lâu để bạn có kế hoạch nhập hàng hoặc xả hàng kịp thời.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-1 flex justify-center items-center w-full h-full">
+        <div
+            class="px-10 w-full shadow-xl rounded-md bg-white p-5 flex flex-col justify-center items-center gap-1"
+        >
+            <h1 class="text-3xl font- text-blue-600">Đăng ký cửa hàng</h1>
+            <p class="">
+                Để khám phá tại sao
+                <span class="text-blue-600 font-semibold">+200</span> nhà bán
+                hàng khác tin dùng
+                <span class="text-blue-600 font-semibold">Lemoo</span>
+            </p>
+            <form asp-action="Register" method="post" class="w-full py-3 h-full flex-1 space-y-2">
+                @if (@ViewData["Error_message"] != null)
+                {
+                    <div class="px-3 py-3 rounded-md border border-red-500 bg-red-500/5 text-red-500">
+                        @ViewData["Error_message"]
+                    </div>
+                }
+                <div class="flex gap-3">
+                    <!-- Store owner name -->
+                    <div
+                        class="flex flex-col justify-start items-start gap-1 w-full"
+                    >
+                        <label asp-for="StoreOwnerName" class="text-base font-semibold"
+                            >Tên chủ cửa hàng:</label>
+                        <input
+                            type="text"
+                               asp-for="StoreOwnerName"
+                            class="px-5 py-3 border border-slate-200 rounded-xl outline-blue-600 w-full"
+                            placeholder="Tên của bạn là gì?"
+                        />
+                        <span asp-validation-for="StoreOwnerName" class="text-xs text-red-500"></span>
+                    </div>
+
+                    <!-- Store name -->
+                    <div
+                        class="flex flex-col justify-start items-start gap-1 w-full"
+                    >
+                        <label asp-for = "StoreName" class="font-semibold"
+                            >Tên cửa hàng:</label >
+                        <input
+                            type="text"
+                            asp-for="StoreName"
+                            class="px-5 py-3 border border-slate-200 rounded-xl outline-blue-600 w-full"
+                            placeholder="Tên cửa hàng của bạn là gì?"
+                        />
+                        <span asp-validation-for="StoreName" class="text-xs text-red-500"></span>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <!-- Email -->
+                    <div
+                        class="flex flex-col justify-start items-start gap-1 w-full"
+                    >
+                        <label asp-for = "Email" class="font-semibold"
+                            >Địa chỉ email:</label>
+                        <input asp-for="Email"
+                            type="text"
+                            id="store-name"
+                            class="px-5 py-3 border border-slate-200 rounded-xl outline-blue-600 w-full"
+                            placeholder="Địa chỉ emai liên lạc của bạn?"
+                        />
+                        <span asp-validation-for="Email" class="text-xs text-red-500"></span>
+                    </div>
+
+                    <!-- Phone -->
+                    <div
+                        class="flex flex-col justify-start items-start gap-1 w-full"
+                    >
+                        <label asp-for="Phone" class="font-semibold">Số điện thoại:</label >
+                        <input
+                            type="text"
+                            asp-for="Phone"
+                            class="px-5 py-3 border border-slate-200 rounded-xl outline-blue-600 w-full"
+                            placeholder="Số điện thoại của bạn là gì?"
+                        />
+                        <span asp-validation-for="Phone" class="text-xs text-red-500"></span>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div
+                    class="flex flex-col justify-start items-start gap-1 w-full"
+                >
+                    <label  asp-for="Password" for="store-name" class="font-semibold"
+                        >Mật khẩu:</label>
+                    <input
+                        type="text"
+                           asp-for="Password"
+                        class="px-5 py-3 border border-slate-200 rounded-xl outline-blue-600 w-full"
+                        placeholder="••••••••••"
+                    />
+                    <span asp-validation-for="Password" class="text-xs text-red-500"></span>
+                </div>
+                <button
+                    class="w-full px-5 py-3 rounded-xl text-white font-semibold text-center bg-blue-600 !mt-6"
+                >
+                    Đăng ký
+                </button>
+            </form>
+            <div class="my-3 flex gap-1">
+                <p>Bạn đã có tại khoản?</p>
+                <a href="/Auth/Login" class="text-blue-600">Đăng nhập ngay</a>
+            </div>
+
+            <div
+                class="flex justify-center items-center gap-5 px-5 w-full text-slate-600"
+            >
+                <div class="flex-1 h-[1px] bg-slate-200"></div>
+                <span class="text-xs">Hoặc </span>
+                <div class="flex-1 h-[1px] bg-slate-200"></div>
+            </div>
+            <div class="flex justify-center items-center gap-5 w-full">
+                <button
+                    class="flex justify-center items-center gap-3 flex-1 px-5 py-3 rounded-xl font-semibold text-center border border-slate-200 my-3"
+                >
+                    <ion-icon name="logo-google"></ion-icon>
+                    Tiếp tục với google
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

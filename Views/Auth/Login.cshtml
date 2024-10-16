@@ -1,0 +1,100 @@
+@{ Layout = "_AuthLayout"; }
+<div class="flex w-full h-full justify-center items-start gap-10">
+    <div class="w-full max-w-[50%] flex flex-col items-center">
+        <div class="w-[450px] h-[300px]">
+            <img
+                class="w-full h-full object-contain"
+                src="/images/phan-mem-quan-ly-ban-hang.png"
+                alt=""
+            />
+        </div>
+        <div class="my-5 flex flex-col items-center">
+            <div class="w-auto h-[50px]">
+                <img
+                    class="w-full h-full object-contain"
+                    src="/images/logo.png"
+                    alt=""
+                />
+            </div>
+            <h3 class="my-5 text-2xl font-semibold">
+                Website quản lý bán hàng tốt nhất cho cửa hàng bán lẻ
+            </h3>
+
+            <p>
+                Theo dõi cộng đồng
+                <a class="font-semibold text-blue-600" href="">Lemoo</a> để nhận
+                được những ưu đãi hấp dẫn
+            </p>
+            <a
+                href=""
+                class="bg-green-400 px-5 py-3 text-white font-semibold rounded-full my-5 flex justify-center items-center gap-2"
+                >Tham gia ngay
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <div class="flex-1 flex justify-center items-center w-full h-full">
+        <div
+            class="px-10 w-full shadow-xl rounded-md bg-white p-5 flex flex-col justify-center items-center gap-1"
+        >
+            <h1 class="text-3xl font-semibold text-blue-600">Đăng nhập</h1>
+            <p class="my-3 text-lg">Đăng nhập vào cửa hàng của bạn</p>
+            <form action="" class="w-full py-3 h-full flex-1 space-y-2">
+                <!-- Store owner name -->
+                <div
+                    class="flex flex-col justify-start items-start gap-1 w-full"
+                >
+                    <label for="store-name" class="text-base font-semibold"
+                        >Địa chỉ email:</label
+                    >
+                    <input
+                        type="text"
+                        id="store-name"
+                        class="px-5 py-3 border border-slate-200 rounded-xl outline-blue-600 w-full"
+                        placeholder="Địa chỉ email đăng nhập"
+                    />
+                </div>
+                <!-- Password -->
+                <div
+                    class="flex flex-col justify-start items-start gap-1 w-full"
+                >
+                    <label for="store-name" class="font-semibold"
+                        >Mật khẩu:</label
+                    >
+                    <input
+                        type="text"
+                        id="store-name"
+                        class="px-5 py-3 border border-slate-200 rounded-xl outline-blue-600 w-full"
+                        placeholder="••••••••••"
+                    />
+                </div>
+
+                <button
+                    class="w-full px-5 py-3 rounded-xl text-white font-semibold text-center bg-blue-600 !mt-6"
+                >
+                    Đăng nhập
+                </button>
+            </form>
+            <div class="my-3 flex gap-1">
+                <p>Bạn chưa có tài khoản?</p>
+                <a href="/Auth/Register" class="text-blue-600">Tạo tài khoản</a>
+            </div>
+
+            <div
+                class="flex justify-center items-center gap-5 px-5 w-full text-slate-600"
+            >
+                <div class="flex-1 h-[1px] bg-slate-200"></div>
+                <span class="text-xs">Hoặc </span>
+                <div class="flex-1 h-[1px] bg-slate-200"></div>
+            </div>
+            <div class="flex justify-center items-center gap-5 w-full">
+                <button
+                    class="flex justify-center items-center gap-3 flex-1 px-5 py-3 rounded-xl font-semibold text-center border border-slate-200 my-3"
+                >
+                    <ion-icon name="logo-google"></ion-icon>
+                    Tiếp tục với google
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,8 +4,6 @@ using Lemoo_pos.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 
-
-
 var builder = WebApplication.CreateBuilder(args);
 
 

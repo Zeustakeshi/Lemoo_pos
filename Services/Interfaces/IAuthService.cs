@@ -1,7 +1,9 @@
-﻿namespace Lemoo_pos.Services.Interfaces
+﻿using Lemoo_pos.Models;
+
+namespace Lemoo_pos.Services.Interfaces
 {
     public interface IAuthService
     {
-        string login(string username, string password);
+        void CreateAccount(CreateStoreModel createAccountModel);
     }
 }
