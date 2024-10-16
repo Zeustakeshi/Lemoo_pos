@@ -15,6 +15,6 @@ namespace Lemoo_pos.Controllers
         {
             return View();
         }
-       
+
     }
 }
