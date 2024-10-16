@@ -7,19 +7,13 @@ namespace Lemoo_pos.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IAuthService _authService;
-        private readonly IUserService _userService;
-
-
-        public HomeController( IAuthService authService, IUserService userService)
+        public HomeController( )
         {
-            _userService = userService;
-            _authService = authService;
         }
 
         public IActionResult Index()
         {
-            return View(_userService.GetAllUser());
+            return View();
         }
 
         

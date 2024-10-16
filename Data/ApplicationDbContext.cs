@@ -15,6 +15,7 @@ namespace Lemoo_pos.Data
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserBranch> UserBranches { get; set; }
         public DbSet<Permission> Permissions { get; set; }
+        public DbSet<CreateStoreTmp> CreateStoreTmps { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -35,6 +36,10 @@ namespace Lemoo_pos.Data
 
             modelBuilder.Entity<UserBranch>()
                 .HasKey(u => new { u.UserId, u.BranchId });
+
+            modelBuilder.Entity<CreateStoreTmp>()
+                .HasIndex(c => c.Code)
+                .IsUnique();
         }
 
         public override int SaveChanges()

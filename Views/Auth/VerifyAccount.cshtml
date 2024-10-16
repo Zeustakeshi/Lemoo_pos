@@ -1,0 +1,27 @@
+﻿@model StoreMoreInfo
+@{
+	Layout = "_AuthLayout";
+}
+
+<div class="w-full h-full flex justify-center items-center">
+	<div class="min-w-[400px] p-5 shadow-xl rounded-xl bg-white flex flex-col justify-center items-center">
+		<h1 class="text-2xl font-semibold text-blue-600 ">Xác nhận tạo tài khoản</h1>
+		@if (@ViewData["Error_message"] != null)
+		{
+			<div class="px-5 py-3 rounded-md border border-red-500 bg-red-500/5 text-red-500 my-4">
+				@ViewData["Error_message"]
+			</div>
+			<a class="px-5 py-3 rounded-md bg-blue-600 text-white font-semibold " href="">Về trang chủ</a>
+		}else
+		{
+			<p>Bạn đã yêu cầu tạo tài khoản cửa hàng trên hệ thống <span>Lemoo</span></p>
+			<div>
+				<input type="checkbox" />
+				Tôi đã đọc và đồng ý với các điều khoản
+			</div>
+
+			<button class="px-5 py-3 rounded-md bg-blue-600 text-white font-semibold">Xác nhận</button>
+		}
+		
+	</div>
+</div>
