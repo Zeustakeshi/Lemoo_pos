@@ -3,7 +3,7 @@
     Layout = "_ProductDetailLayout";
 }
 
-<header class="w-full d-flex align-items-center justify-content-between bg-white border-none"
+<header class="sticky-top w-full d-flex align-items-center justify-content-between bg-white border-none"
         data-bs-theme="dark">
     <div class="container-xl w-full d-flex flex-row justify-content-between align-items-center py-2">
         <div>
@@ -23,3 +23,9 @@
 
     </div>
 </header>
+
+<div class="page-body">
+    <div class="container-xl">
+        @await Component.InvokeAsync("NewProductForm")
+    </div>
+</div>

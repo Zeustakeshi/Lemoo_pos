@@ -1,0 +1,429 @@
+﻿<div class="card-row col-12 w-full max-w-full d-flex gap-4 px-5">
+
+
+	@* Left *@
+
+	<div class="col-9">
+
+		@* Thông tin chung *@
+		<div class="card card-borderless">
+			<div class="card-header">
+				<div class="card-title">Thông tin chung</div>
+			</div>
+			<div class="card-body pt-0">
+
+				@* input tên sản phẩm *@
+
+				<div class="mb-3">
+					<label class="form-label required">Tên sản phẩm</label>
+					<div>
+						<input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Nhập tên sản phẩm">
+						<small class="form-hint">Tên sản phẩm không bao gồm các giá trị thuộc tính như màu sắc, chất liệu, kích cỡ...</small>
+					</div>
+				</div>
+
+				<div class="d-flex align-items-center gap-4">
+
+					@* input mã sản phẩm  *@
+
+					<div class="mb-3 w-full">
+						<label class="form-label ">Mã sản phẩm/SKU</label>
+						<div>
+							<input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
+						</div>
+					</div>
+
+					@* input khối lượng sản phẩm *@
+
+					<div class="mb-3 w-full">
+						<label class="form-label">Khối lượng</label>
+						<div class="input-group col-12 w-full">
+							<div class="col-9">
+								<input type="number" min="0" class="form-control" aria-label="">
+							</div>
+							<div class="col-3">
+								<select class="form-select">
+									<option value="g">g</option>
+									<option value="kg">Kg</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				@* input mô tả sản phẩm *@
+
+				<div class="w-full">
+					<label class="form-label">Mô tả sản phẩm</label>
+					<textarea class="form-control " style="max-height:200px" data-bs-toggle="autosize" placeholder="Nhập mô tả sản phẩm" style="overflow: hidden; overflow-wrap: break-word; resize: none; text-align: start; height: 59.6px;"></textarea>
+				</div>
+
+			</div>
+
+		</div>
+
+		@* Giá sản phẩm *@
+
+		<div class="card card-borderless mt-3">
+			<div class="card-header">
+				<div class="card-title">Giá sản phẩm</div>
+			</div>
+
+			<div class="card-body pt-0">
+				<div class=" d-flex gap-4">
+
+					@* Giá bán lẻ *@
+
+					<div class="mb-3  w-full">
+						<label class="form-label">Giá bán lẻ</label>
+						<input type="number" min="0" class="form-control" aria-label="">
+					</div>
+
+					@* Giá bán buôn *@
+
+					<div class="mb-3  w-full">
+						<label class="form-label">Giá bán buôn</label>
+						<input type="number" min="0" class="form-control" aria-label="">
+					</div>
+
+
+				</div>
+
+				<div class="">
+					@* Giá nhập *@
+
+					<div class="mb-3 " style="width:50%;">
+						<label class="form-label">Giá nhập</label>
+						<input type="number" min="0" class="form-control" aria-label="">
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+		@* Ảnh sản phẩm *@
+
+		<div class="card card-borderless mt-3">
+			<div class="card-header">
+				<div class="card-title">Ảnh sản phẩm</div>
+			</div>
+
+			<div class="card-body pt-0">
+				<form class="dropzone dz-clickable " style="border-style:dashed" id="dropzone-custom" action="./" autocomplete="off" novalidate="">
+					<div class="dz-message">
+						<h3 class="dropzone-msg-title">Kéo thả ảnh vào đây</h3>
+						<span class="dropzone-msg-desc">Hoặc tải lên từ thiết bị</span>
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+
+		
+	</div>
+
+
+	@* Right *@
+
+	<div class="col-3">
+		@* Thông tin bổ sung *@
+		<div class="card card-borderless ">
+			<div class="card-header">
+				<div class="card-title">Thông tin bổ sung</div>
+			</div>
+			<div class="card-body pt-0">
+
+				@* Loại sản phẩm *@
+
+				<div class="mb-3">
+					<label class="form-label">Loại sản phẩm</label>
+					<select name="user[month]" class="form-select">
+						<option value="AO_VEST">Áo vest</option>
+						<option selected value="AO_KHOAC">Áo khoác</option>
+
+					</select>
+				</div>
+
+
+				@* Nhãn hiệu *@
+
+				<div class="mb-3">
+					<label class="form-label">Nhãn hiệu</label>
+					<select name="user[month]" class="form-select">
+						<option value="AO_VEST">Áo vest</option>
+						<option selected value="AO_KHOAC">Áo khoác</option>
+					</select>
+				</div>
+
+				@* input tags *@
+
+				<div class="w-full">
+					<label class="form-label">Tags</label>
+					<textarea class="form-control " style="max-height:200px" data-bs-toggle="autosize" style="overflow: hidden; overflow-wrap: break-word; resize: none; text-align: start; height: 59.6px;"></textarea>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="card card-borderless mt-3">
+			<div class="card-body">
+				<div class="mb-3 w-full">
+					<div class="form-label">Trạng thái</div>
+					<label class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" checked="">
+						<span class="form-check-label">Cho phép bán</span>
+					</label>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+
+</div>
+
+
+@* Giá bán, Kho hàng và Biến thể *@
+
+<div class="card card-borderless mt-3">
+	<div class="card-header">
+		<div class="card-title">
+			Kho hàng và Biến thể
+		</div>
+	</div>
+
+	<div class="card-body pt-0">
+
+		<div class="my-2">
+			<h4>Biến thể sản phẩm</h4>
+
+			@* Biến thể 1 *@
+
+			<div class="card col-9 my-2">
+				<div class="card-status-start bg-primary"></div>
+				<div class="card-body">
+					<div class="w-full d-flex justify-content-between align-items-center">
+						<h4 class="">Biến thể 1</h4>
+						<button class="btn btn-ghost-danger">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+								<path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+							</svg>
+						</button>
+					</div>
+				
+					@* input tên biến thể *@
+					<div class="my-3 col-6">
+						<label class="form-label required">Tên biến thể</label>
+						<div>
+							<input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Nhập tên biến thể">
+						</div>
+					</div>
+
+					<div class="my-3">
+						<label class="form-label required">Tổng số biến thể</label>
+
+						@for (int i = 0; i < 5; ++i)
+						{
+							@* Biến thể 1 *@
+							<div class="w-full d-flex justify-content-start gap-2 align-items-center my-2">
+								@* <label for="variantImage-@(i + 1)" class="dz-message btn" style="border-style:dashed">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+										<path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+										<path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z" />
+									</svg>
+								</label>
+								<input type="file" hidden id="variantImage-@(i + 1)" class="form-control" placeholder="Biến thể @(i + 1)"> *@
+								<input type="email" class="form-control" placeholder="Biến thể @(i + 1)">
+								<button class="btn btn-ghost-danger">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+										<path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+									</svg>
+								</button>
+							</div>
+						}
+
+						<button class="btn btn-primary">Thêm</button>
+
+						
+
+					</div>
+					
+				</div>
+			</div>
+
+
+			@* Biến thể 2 *@
+
+			<div class="card col-9 my-2">
+				<div class="card-status-start bg-primary"></div>
+				<div class="card-body">
+					<div class="w-full d-flex justify-content-between align-items-center">
+						<h4 class="">Biến thể 2</h4>
+						<button class="btn btn-ghost-danger">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+								<path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+							</svg>
+						</button>
+					</div>
+
+					@* input tên biến thể *@
+					<div class="my-3 col-6">
+						<label class="form-label required">Tên biến thể</label>
+						<div>
+							<input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Nhập tên biến thể">
+						</div>
+					</div>
+
+					<div class="my-3">
+						<label class="form-label required">Tổng số biến thể</label>
+
+						@for (int i = 0; i < 5; ++i)
+						{
+							@* Biến thể 1 *@
+							<div class="w-full d-flex justify-content-start gap-2 align-items-center my-2">
+								@* <label for="variantImage-@(i + 1)" class="dz-message btn" style="border-style:dashed">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+							<path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+							<path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z" />
+							</svg>
+							</label>
+							<input type="file" hidden id="variantImage-@(i + 1)" class="form-control" placeholder="Biến thể @(i + 1)"> *@
+								<input type="email" class="form-control" placeholder="Biến thể @(i + 1)">
+								<button class="btn btn-ghost-danger">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+										<path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+									</svg>
+								</button>
+							</div>
+						}
+
+						<button class="btn btn-primary">Thêm</button>
+
+
+
+					</div>
+
+				</div>
+			</div>
+
+
+			<button class="btn my-3">Thêm biến thể</button>
+		</div>
+
+		@* Giá bán và kho hàng *@
+
+		<div class="mt-3">
+			<h4>Giá bán và kho hàng</h4>
+			<div class="table-responsive">
+				<table class="table  table-borderless card-table">
+					<thead>
+						<tr>
+							<th>Tên phiên bản</th>
+							<th>Ảnh</th>
+							<th>Mã SKU</th>
+							<th>Bar code</th>
+							<th>Giá bán lẻ</th>
+							<th>Giá bán buôn</th>
+							<th>Giá nhập</th>
+							<th>Khối lượng</th>
+							<th>Tồn kho</th>
+							<th>Giá vốn</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+
+							@* 	<th>Tên phiên bản</th> *@
+							<td>Đỏ - xl</td>
+
+							@* 	<th>Ảnh</th> *@
+							<td>
+								<label for="variantImage" class="dz-message btn" style="border-style:dashed">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+										<path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+										<path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z" />
+									</svg>
+								</label>
+								<input type="file" hidden id="variantImage" class="form-control" placeholder="Biến thể">
+							</td>
+
+							@* <th>Mã SKU</th> *@
+							<td style="min-width:150px">
+								<input type="text" min="0" class="form-control" aria-label="">
+							</td>
+
+							@* <th>Bar code</th> *@
+							<td style="min-width:150px">
+								<input  type="text" min="0" class="form-control" aria-label="">
+							</td>
+
+							@* <th>Giá bán lẻ</th> *@
+							<td>
+								<input type="number" min="0" class="form-control" aria-label="">
+							</td>
+
+							@* <th>Giá bán buôn</th> *@
+							<td>
+								<input type="number" min="0" class="form-control" aria-label="">
+							</td>
+
+							@* <th>Giá nhập</th> *@
+							<td>
+								<input type="number" min="0" class="form-control" aria-label="">
+							</td>
+
+							@* <th>Khối lượng</th> *@
+							<td>
+								<input type="number" min="0" class="form-control" aria-label="">
+							</td>
+
+							@* <th>Tồn kho</th> *@
+							<td>
+								<input type="number" min="0" class="form-control" aria-label="">
+							</td>
+
+							@* <th>Giá vốn</th> *@
+							<td>
+								<input type="number" min="0" class="form-control" aria-label="">
+							</td>
+
+							@* <th>Action</th> *@
+							<td>
+								<button class="btn btn-outline-danger">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+										<path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+									</svg>
+								</button>
+							</td>
+
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		for (let i = 1; i <= 5; ++i)
+		{
+			new Dropzone(`#dropzone-custom-${i}`) 
+		}
+	})
+</script>
+
+
+
+
