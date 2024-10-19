@@ -1,0 +1,195 @@
+﻿@{
+    ViewData["Title"] = "Danh sách khách hàng";
+    Layout = "_DashboardLayout";
+    ViewData["CanGoBack"] = true;
+}
+
+<div class="page-body">
+    <div class="container-xl">
+        <div class="col d-flex align-items-center justify-content-between w-full">
+            <div>
+                <button class="btn btn-outline-primary">Nhập file</button>
+                <button class="btn btn-outline-primary">Xuất file</button>
+            </div>
+            <div class="ml-auto">
+                <a href="#" class="btn btn-primary btn-custom">Thêm khách hàng</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-box m-3">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Tất cả</a>
+            </li>
+        </ul>
+        <div class="search-bar mt-3">
+            <input type="text" class="form-control" placeholder="Tìm kiếm khách hàng" width="200px" />
+            <div class="filters">
+                <select class="form-control" style="width: 200px">
+                    <option>Nhóm khách hàng</option>
+                </select>
+                <select class="form-control" style="width: 200px">
+                    <option>Trạng thái</option>
+                </select>
+                <button class="btn btn-outline-secondary">Bộ lọc khác</button>
+            </div>
+        </div>
+
+        <div class="table-responsive mt-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" /></th>
+                        <th>Thông tin</th>
+                        <th>Email</th>
+                        <th>Điện thoại</th>
+                        <th>Đơn hàng</th>
+                        <th>Đơn hàng gần nhất</th>
+                        <th>Tổng chi tiêu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>
+                            <div class="customer-info">
+                                <span class="avatar">DF</span>
+                                <a href="#" class="customer-link">dfg sdf</a>
+                            </div>
+                        </td>
+                        <td>a@gmail.com</td>
+                        <td>+84033999222</td>
+                        <td>0</td>
+                        <td>---</td>
+                        <td>0đ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between mt-3">
+            <div>
+                Từ 1 đến 1 trên tổng 1
+            </div>
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                </ul>
+            </nav>
+        </div>
+      
+    </div>
+    <div class="mt-3 text-center">
+        <a href="#" class="text-primary">Tìm hiểu thêm về khách hàng</a>
+    </div>
+
+</div>
+
+
+<style>
+    .page-body {
+        padding: 20px;
+        background-color: #f8f9fa;
+    }
+
+    .content-box {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    }
+
+    .btn-custom {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+    }
+
+    .btn-outline-primary {
+        border-color: #007bff;
+        color: #007bff;
+    }
+
+    .table-responsive {
+        margin-top: 20px;
+    }
+
+    .customer-info {
+        display: flex;
+        align-items: center;
+    }
+
+        .customer-info .avatar {
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0.5rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+    .customer-link {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .customer-link:hover {
+            text-decoration: underline;
+        }
+
+    .pagination {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+        .pagination .page-item {
+            margin-right: 5px;
+        }
+
+        .pagination .page-link {
+            color: #007bff;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+            .pagination .page-link:hover {
+                background-color: #007bff;
+                color: white;
+            }
+
+    .search-bar {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .filters {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .d-flex.align-items-center.justify-content-between {
+        margin-bottom: 1rem;
+    }
+
+    .m-3 {
+        margin: 1rem;
+    }
+
+    .ml-auto {
+        margin-left: auto;
+    }
+
+    .nav-tabs .nav-link.active {
+        border-bottom: 2px solid #007bff;
+        color: #007bff;
+    }
+
+</style>
